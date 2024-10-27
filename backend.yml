@@ -11,8 +11,11 @@
 
   - name: installing mysql-server
     ansible.builtin.package:
-      name: nodejs
+      name: "{{item}}"
       state: present  
+    loop:
+    - nodejs
+    - mysql  
 
   - name: Add the user 
     ansible.builtin.user:
