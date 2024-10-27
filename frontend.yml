@@ -33,6 +33,16 @@
       dest: /usr/share/nginx/html
       remote_src: yes       
 
-      
+
+  - name: Copy file 
+    ansible.builtin.copy:
+      src: expense.conf
+      dest: /etc/nginx/default.d/expense.conf
+ 
+  - name: nginx restarted
+    ansible.builtin.service:
+      name: nginx
+      state: restarted
+
 
 
