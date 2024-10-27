@@ -26,6 +26,11 @@
      login_password: ExpenseApp@1
      login_host: mysql.daws83s.shop
     register: mysql_info
+    ignore_errors: true
+
+  
+
+
    
 
  
