@@ -14,7 +14,11 @@
       name: nodejs
       state: present  
 
-      
+  - name: Add the user 
+    ansible.builtin.user:
+     name: expense
+
+
 
 
       
