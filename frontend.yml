@@ -22,7 +22,7 @@
 
 
     
-  - name: Delete content & directory
+  - name: creating the directory
     ansible.builtin.file:
      state: present
      path:    /usr/share/nginx/html 
