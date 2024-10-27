@@ -28,6 +28,8 @@
      state: directory   
 
 
+
+
   - name: Download the code
     ansible.builtin.get_url:
       url: https://expense-builds.s3.us-east-1.amazonaws.com/expense-backend-v2.zip
@@ -50,6 +52,18 @@
     ansible.builtin.copy:
       src: backend.service
       dest: /etc/systemd/system/backend.service
+
+
+  - name: Try to create database as root/nopassword first. If not allowed, pass the credentials
+    community.mysql.mysql_db:
+      name: all
+      state: import
+    
+      login_user: ec2-user
+      login_password: ExpenseApp@1
+      login_host: mysql.daws83s.shop
+      target: /app/schema/backend.sql
+        
    
 
 
