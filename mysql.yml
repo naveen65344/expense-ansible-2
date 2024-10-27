@@ -8,7 +8,7 @@
       state: present
 
 
-  - name: installing mysql-server
+  - name: installing PYMSQL 
     ansible.builtin.pip:
       name:
       - PyMySQL 

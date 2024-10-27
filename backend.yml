@@ -53,6 +53,11 @@
       src: backend.service
       dest: /etc/systemd/system/backend.service
 
+  - name: installing PYMSQL 
+    ansible.builtin.pip:
+      name:
+      - PyMySQL    
+
 
   - name: Try to create database as root/nopassword first. If not allowed, pass the credentials
     community.mysql.mysql_db:
