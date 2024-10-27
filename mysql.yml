@@ -28,7 +28,9 @@
     register: mysql_info
     ignore_errors: true
 
-  
+  - name: configuring password
+    ansible.builtin.command: mysql_secure_installation --set-root-pass ExpenseApp@1
+    when: mysql_info.failed is true
 
 
    
