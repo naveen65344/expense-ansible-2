@@ -56,7 +56,8 @@
   - name: installing PYMSQL 
     ansible.builtin.pip:
       name:
-      - PyMySQL    
+      - PyMySQL 
+      - cryptography   
 
 
   - name: Try to create database as root/nopassword first. If not allowed, pass the credentials
