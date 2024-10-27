@@ -40,7 +40,7 @@
   - name: installing dependencies
     ansible.builtin.command: npm install 
     args:
-    chdir: /app    
+     chdir: /app    
    
 
 
