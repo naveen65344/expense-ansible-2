@@ -18,6 +18,6 @@
   - name: Delete content & directory
     ansible.builtin.file:
      state: absent
-     path:    /usr/share/nginx/html/*
+     path:    /usr/share/nginx/html
 
 
