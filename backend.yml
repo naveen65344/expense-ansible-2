@@ -63,12 +63,12 @@
   
 
 
-  - name: Try to create database as root/nopassword first. If not allowed, pass the credentials
+  - name: import mysql data
     community.mysql.mysql_db:
       name: all
       state: import
     
-      login_user: ec2-user
+      login_user: root
       login_password: ExpenseApp@1
       login_host: mysql.daws83s.shop
       target: /app/schema/backend.sql
